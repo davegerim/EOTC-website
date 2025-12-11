@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCustomCursor();
     initMagneticElements();
     initMenu();
+    initModal(); // New Guardianship Modal
     initScrollAnimations();
     initMarquee();
 
@@ -380,6 +381,43 @@ function initMenu() {
     links.forEach(link => {
         link.addEventListener('click', () => { setTimeout(toggleMenu, 100); });
     });
+}
+
+// Guardianship Modal Logic
+function initModal() {
+    const modal = document.getElementById('join-modal');
+    if (!modal) return;
+
+    const openBtns = document.querySelectorAll('.footer-cta .btn-circle'); // "Join Us" buttons
+    const closeBtn = modal.querySelector('.modal-close');
+    const overlayBg = modal.querySelector('.modal-bg-blur');
+    const card = modal.querySelector('.modal-card');
+    const options = modal.querySelectorAll('.option-card');
+
+    const openModal = (e) => {
+        e.preventDefault();
+        gsap.set(modal, { visibility: 'visible' });
+
+        const tl = gsap.timeline();
+        tl.to(modal, { opacity: 1, duration: 0.4 })
+            .fromTo(card,
+                { scale: 0.9, opacity: 0, y: 50 },
+                { scale: 1, opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=0.2")
+            .fromTo(options,
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "power2.out" }, "-=0.4");
+    };
+
+    const closeModal = () => {
+        const tl = gsap.timeline({
+            onComplete: () => gsap.set(modal, { visibility: 'hidden' })
+        });
+        tl.to(modal, { opacity: 0, duration: 0.3 });
+    };
+
+    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+    overlayBg.addEventListener('click', closeModal);
 }
 
 function initScrollAnimations() {
