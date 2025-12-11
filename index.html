@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EOTC | Sacred Heritage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Syne for headings, Manrope for body, Noto Sans Ethiopic for Amharic -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Background Grid Lines -->
+  <div class="page-lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-follower"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <span class="count">0</span>
+      <span class="count-label">%</span>
+    </div>
+    <div class="preloader-curtain"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo-wrapper">
+      <a href="#" class="logo magnetic" data-strength="20">
+        <span class="logo-text">EOTC</span>
+      </a>
+    </div>
+    <div class="menu-toggle-wrapper magnetic" data-strength="30">
+      <div class="menu-toggle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-label">Menu</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fullscreen Menu Overlay (3-Column Layout) -->
+  <div class="menu-overlay">
+    <div class="menu-overlay-bg"></div>
+    <div class="menu-cols">
+      <!-- Left Column: Branding & Info -->
+      <div class="menu-col menu-left">
+        <div class="menu-brand">e o t c</div>
+        <div class="address-block">
+          <p class="label">we are always here</p>
+          <p>Addis Ababa, Ethiopia</p>
+          <p>4 Kilo, Holy Trinity</p>
+          <p>+251 11 123 4567</p>
+        </div>
+      </div>
+
+      <!-- Center Column: Navigation -->
+      <div class="menu-col menu-center">
+        <ul class="main-menu">
+          <li><a href="/" class="menu-link"><span class="amharic-menu">ቤት</span> Home</a></li>
+          <li><a href="works.html" class="menu-link"><span class="amharic-menu">ስራዎች</span> Works</a></li>
+          <li><a href="#heritage" class="menu-link"><span class="amharic-menu">ቅርስ</span> Heritage</a></li>
+          <li><a href="#contact" class="menu-link"><span class="amharic-menu">አግኙን</span> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Close & Socials -->
+      <div class="menu-col menu-right">
+        <div class="close-btn-wrapper">
+          <button class="close-menu-btn magnetic" data-strength="50">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="menu-socials">
+          <a href="#">behance.</a>
+          <a href="#">twitter.</a>
+          <a href="#">instagram.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Wrapper for Lenis -->
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- Hero Section -->
+      <header id="home" class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-text">
+            <div class="amharic-hero-sup">የኢትዮጵያ ቅርስ</div>
+            <h1 class="hero-title">
+              <div class="line"><span class="char-reveal">Sacred</span></div>
+              <div class="line"><span class="char-reveal">Ethiopian</span></div>
+              <div class="line"><span class="char-reveal highlight">Legacy.</span></div>
+            </h1>
+            <div class="amharic-hero-sub">የተዋህዶ እምነት ምስክር</div>
+          </div>
+          <div class="hero-sub">
+            <p>Witness the timeless spirituality of the<br>Orthodox Tewahedo Church.</p>
+            <div class="scroll-hint">
+              <div class="circle-text">
+                <svg viewBox="0 0 100 100" width="100" height="100">
+                  <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                  <text font-size="12">
+                    <textPath xlink:href="#circlePath">SCROLL DOWN • DISCOVER • SCROLL DOWN •</textPath>
+                  </text>
+                </svg>
+                <i class="fa-solid fa-arrow-down center-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Background Image Parallax -->
+        <div class="hero-bg-wrapper">
+          <div class="hero-img parallax-img" data-speed="0.5">
+            <img src="/images/img7.jpg" alt="Hero Priest">
+          </div>
+        </div>
+      </header>
+
+      <!-- Marquee Strip -->
+      <div class="marquee-strip" data-direction="left" data-speed="2">
+        <div class="marquee-inner">
+          <span>Faith</span> <span class="divider">•</span>
+          <span>Tradition</span> <span class="divider">•</span>
+          <span>History</span> <span class="divider">•</span>
+          <span>Divinity</span> <span class="divider">•</span>
+          <span>Faith</span> <span class="divider">•</span>
+          <span>Tradition</span> <span class="divider">•</span>
+          <span>History</span> <span class="divider">•</span>
+          <span>Divinity</span> <span class="divider">•</span>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid Section -->
+      <section id="gallery" class="portfolio-section">
+        <div class="container">
+          <div class="section-header">
+            <h6 class="subtitle reveal-fade">Selected Works</h6>
+            <h2 class="section-title reveal-fade">Visual <br>Chronicle</h2>
+          </div>
+
+          <div class="portfolio-grid">
+            <!-- Item 1 -->
+            <div class="portfolio-item double-w">
+              <div class="item-img-wrapper cursor-view">
+                <img src="/images/img1.jpg" alt="Timket" class="parallax-img" data-speed="0.1">
+              </div>
+              <div class="item-info">
+                <h3>Timket Procession</h3>
+                <span class="category">Celebration</span>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="portfolio-item single-w offset-top">
+              <div class="item-img-wrapper cursor-view">
+                <img src="/images/img2.jpg" alt="Vigil" class="parallax-img" data-speed="0.1">
+              </div>
+              <div class="item-info">
+                <h3>Night Vigil</h3>
+                <span class="category">Prayer</span>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="portfolio-item single-w">
+              <div class="item-img-wrapper cursor-view">
+                <img src="/images/img6.jpg" alt="Pilgrimage" class="parallax-img" data-speed="0.1">
+              </div>
+              <div class="item-info">
+                <h3>The Journey</h3>
+                <span class="category">Pilgrimage</span>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="portfolio-item double-w offset-down">
+              <div class="item-img-wrapper cursor-view">
+                <img src="/images/img8.jpg" alt="Clergy" class="parallax-img" data-speed="0.1">
+              </div>
+              <div class="item-info">
+                <h3>Clergy</h3>
+                <span class="category">Portrait</span>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="portfolio-item single-w">
+              <div class="item-img-wrapper cursor-view">
+                <img src="/images/img3.jpg" alt="Church" class="parallax-img" data-speed="0.1">
+              </div>
+              <div class="item-info">
+                <h3>Sanctuary</h3>
+                <span class="category">Architecture</span>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="portfolio-item single-w offset-top">
+              <div class="item-img-wrapper cursor-view">
+                <img src="/images/img5.jpg" alt="Liturgy" class="parallax-img" data-speed="0.1">
+              </div>
+              <div class="item-info">
+                <h3>Liturgy</h3>
+                <span class="category">Worship</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="contact" class="footer-section">
+        <div class="container">
+          <div class="footer-cta reveal-fade">
+            <h2>Let's Preserve<br>The Legacy.</h2>
+            <a href="#" class="btn-circle magnetic" data-strength="50">
+              <span>Join Us</span>
+            </a>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-col">
+              <h5>Socials</h5>
+              <ul>
+                <li><a href="#" class="hover-underline">Instagram</a></li>
+                <li><a href="#" class="hover-underline">Twitter</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="#" class="hover-underline">info@eotc.et</a></li>
+              </ul>
+            </div>
+            <div class="footer-col copyright">
+              <p>&copy; 2025 EOTC. Made with reverence.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div> <!-- End Smooth Content -->
+  </div> <!-- End Smooth Wrapper -->
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

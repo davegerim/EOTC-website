@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EOTC | Visual Chronicle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Syne for headings, Manrope for body, Noto Sans Ethiopic for Amharic -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Grid Lines -->
+    <div class="page-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <span class="count">0</span>
+            <span class="count-label">%</span>
+        </div>
+        <div class="preloader-curtain"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo-wrapper">
+            <a href="/" class="logo magnetic" data-strength="20">
+                <span class="logo-text">EOTC</span>
+            </a>
+        </div>
+        <div class="menu-toggle-wrapper magnetic" data-strength="30">
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-label">Menu</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+        <div class="menu-overlay-bg"></div>
+        <div class="menu-cols">
+            <!-- Left: Branding -->
+            <div class="menu-col menu-left">
+                <div class="menu-brand">e o t c</div>
+                <div class="address-block">
+                    <p class="label">we are always here</p>
+                    <p>Addis Ababa, Ethiopia</p>
+                    <p>4 Kilo, Holy Trinity</p>
+                    <p>+251 11 123 4567</p>
+                </div>
+            </div>
+
+            <!-- Center: Nav -->
+            <div class="menu-col menu-center">
+                <ul class="main-menu">
+                    <li><a href="/" class="menu-link"><span class="amharic-menu">ቤት</span> Home</a></li>
+                    <li><a href="works.html" class="menu-link active"><span class="amharic-menu">ስራዎች</span> Works</a>
+                    </li>
+                    <li><a href="/#heritage" class="menu-link"><span class="amharic-menu">ቅርስ</span> Heritage</a></li>
+                    <li><a href="/#contact" class="menu-link"><span class="amharic-menu">አግኙን</span> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right: Socials -->
+            <div class="menu-col menu-right">
+                <div class="close-btn-wrapper">
+                    <button class="close-menu-btn magnetic" data-strength="50">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="menu-socials">
+                    <a href="#">behance.</a>
+                    <a href="#">twitter.</a>
+                    <a href="#">instagram.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Wrapper -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Works Header -->
+            <header class="works-hero">
+                <div class="container">
+                    <h1 class="works-title reveal-fade">Visual History</h1>
+                    <p class="works-sub reveal-fade">A collection of moments capturing the spiritual essence.</p>
+                </div>
+            </header>
+
+            <!-- Works Grid -->
+            <section class="portfolio-section" style="padding-top: 5rem;">
+                <div class="container">
+                    <div class="portfolio-grid">
+                        <!-- Auto-populated with the new jfif images in a mix of sizes -->
+
+                        <!-- Item 1 -->
+                        <div class="portfolio-item double-w">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1762700769843.jfif" alt="Tewahedo Moment" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>Sacred Gathering</h3>
+                                <span class="category">Ministry</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="portfolio-item single-w offset-top">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1736266955073.jfif" alt="Worship" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>The Believers</h3>
+                                <span class="category">Worship</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="portfolio-item single-w">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1748628362720.jfif" alt="Tradition" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>Ancient Rites</h3>
+                                <span class="category">Tradition</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="portfolio-item single-w offset-down">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1762700793432.jfif" alt="Clergy Member" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>Guidance</h3>
+                                <span class="category">Leadership</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="portfolio-item double-w">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1762700803116.jfif" alt="Procession" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>Holy Procession</h3>
+                                <span class="category">Event</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="portfolio-item single-w offset-top">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1762700758147.jfif" alt="Moment of Prayer" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>Devotion</h3>
+                                <span class="category">Prayer</span>
+                            </div>
+                        </div>
+
+                        <!-- More Items using the jfif files -->
+                        <div class="portfolio-item single-w">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1731225598543.jfif" alt="Church" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>Sanctuary</h3>
+                                <span class="category">Place</span>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item double-w offset-down">
+                            <div class="item-img-wrapper cursor-view">
+                                <img src="/images/1761483414975.jfif" alt="Community" class="parallax-img"
+                                    data-speed="0.1">
+                            </div>
+                            <div class="item-info">
+                                <h3>Community</h3>
+                                <span class="category">People</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brief Footer -->
+            <footer class="footer-section">
+                <div class="container">
+                    <div class="footer-bottom" style="border-top: none;">
+                        <div class="footer-col copyright">
+                            <p>&copy; 2025 EOTC. Made with reverence.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
