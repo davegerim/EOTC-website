@@ -13,6 +13,43 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #0c0c0c;
+            overflow: hidden;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #0c0c0c;
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader-content {
+            color: #D4AF37;
+            font-size: 5rem;
+            font-family: sans-serif;
+            font-weight: 800;
+        }
+
+        .preloader-curtain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,7 +113,8 @@
                     <li><a href="/" class="menu-link"><span class="amharic-menu">ቤት</span> Home</a></li>
                     <li><a href="works.html" class="menu-link active"><span class="amharic-menu">ስራዎች</span> Works</a>
                     </li>
-                    <li><a href="/#heritage" class="menu-link"><span class="amharic-menu">ቅርስ</span> Heritage</a></li>
+                    <li><a href="heritage.html" class="menu-link"><span class="amharic-menu">ቅርስ</span> Heritage</a>
+                    </li>
                     <li><a href="/#contact" class="menu-link"><span class="amharic-menu">አግኙን</span> Contact</a></li>
                 </ul>
             </div>
@@ -103,113 +141,65 @@
 
             <!-- Works Header -->
             <header class="works-hero">
-                <div class="container">
-                    <h1 class="works-title reveal-fade">Visual History</h1>
-                    <p class="works-sub reveal-fade">A collection of moments capturing the spiritual essence.</p>
+                <!-- Background visual -->
+                <div class="works-hero-bg">
+                    <img src="/images/img1.jpg" alt="Background" class="hero-bg-img">
+                </div>
+                <!-- Gradient Overlay -->
+                <div class="works-hero-overlay"></div>
+                <!-- Grain Texture for Film Look -->
+                <div class="grain-overlay"></div>
+
+                <!-- Giant Background Amharic Text (Parallax) -->
+                <div class="bg-amharic-text">ታሪክ</div>
+
+                <div class="container hero-content">
+                    <!-- Floating Badge -->
+                    <div class="hero-badge magnetic" data-strength="50">
+                        <div class="badge-text-wrapper">
+                            <svg viewBox="0 0 100 100" width="100" height="100" class="badge-text-svg">
+                                <path id="badgePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                                <text font-size="14" fill="#D4AF37">
+                                    <textPath xlink:href="#badgePath" startOffset="0%">ETHIOPIAN • ORTHODOX • TEWAHEDO •
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <span class="badge-center">✞</span>
+                    </div>
+
+                    <h1 class="works-title">
+                        <div class="title-line"><span class="title-inner">Visual</span></div>
+                        <div class="title-line"><span class="title-inner">History</span></div>
+                    </h1>
+                    <div class="subtitle-wrapper">
+                        <span class="amharic-sub-hero">የቅርስ ማህደር</span>
+                        <div class="separator-line"></div>
+                        <p class="works-sub">Capturing the Divine Essence</p>
+                    </div>
+                </div>
+
+                <!-- Abstract Scroll Indicator -->
+                <div class="scroll-down-indicator">
+                    <span class="scroll-text">Explore</span>
+                    <div class="scroll-line-track">
+                        <div class="scroll-line-thumb"></div>
+                    </div>
                 </div>
             </header>
 
             <!-- Works Grid -->
             <section class="portfolio-section" style="padding-top: 5rem;">
                 <div class="container">
-                    <div class="portfolio-grid">
-                        <!-- Auto-populated with the new jfif images in a mix of sizes -->
+                    <div class="portfolio-grid" id="portfolio-grid">
+                        <!-- Dynamic Content Will Be Injected Here -->
+                    </div>
 
-                        <!-- Item 1 -->
-                        <div class="portfolio-item double-w">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1762700769843.jfif" alt="Tewahedo Moment" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>Sacred Gathering</h3>
-                                <span class="category">Ministry</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 2 -->
-                        <div class="portfolio-item single-w offset-top">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1736266955073.jfif" alt="Worship" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>The Believers</h3>
-                                <span class="category">Worship</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 3 -->
-                        <div class="portfolio-item single-w">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1748628362720.jfif" alt="Tradition" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>Ancient Rites</h3>
-                                <span class="category">Tradition</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div class="portfolio-item single-w offset-down">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1762700793432.jfif" alt="Clergy Member" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>Guidance</h3>
-                                <span class="category">Leadership</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 5 -->
-                        <div class="portfolio-item double-w">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1762700803116.jfif" alt="Procession" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>Holy Procession</h3>
-                                <span class="category">Event</span>
-                            </div>
-                        </div>
-
-                        <!-- Item 6 -->
-                        <div class="portfolio-item single-w offset-top">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1762700758147.jfif" alt="Moment of Prayer" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>Devotion</h3>
-                                <span class="category">Prayer</span>
-                            </div>
-                        </div>
-
-                        <!-- More Items using the jfif files -->
-                        <div class="portfolio-item single-w">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1731225598543.jfif" alt="Church" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>Sanctuary</h3>
-                                <span class="category">Place</span>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-item double-w offset-down">
-                            <div class="item-img-wrapper cursor-view">
-                                <img src="/images/1761483414975.jfif" alt="Community" class="parallax-img"
-                                    data-speed="0.1">
-                            </div>
-                            <div class="item-info">
-                                <h3>Community</h3>
-                                <span class="category">People</span>
-                            </div>
-                        </div>
-
+                    <div class="load-more-wrapper" style="text-align: center; margin-top: 5rem; display: none;">
+                        <button id="load-more-btn" class="btn-circle magnetic" data-strength="50"
+                            style="background: transparent; color: #fff; cursor: pointer;">
+                            <span>Load More</span>
+                        </button>
                     </div>
                 </div>
             </section>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EOTC | Sacred Heritage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #050505;
+            overflow-x: hidden;
+        }
+
+        /* Darker black */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #050505;
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader-content {
+            color: #D4AF37;
+            font-size: 5rem;
+            font-family: sans-serif;
+            font-weight: 800;
+        }
+
+        .preloader-curtain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="heritage-body">
+    <!-- Golden Particles (Canvas or div based ideally, simple static for now) -->
+    <div class="dust-overlay"></div>
+
+    <!-- Custom Cursor (Gold) -->
+    <div class="cursor-follower gold-cursor"></div>
+    <div class="cursor-dot gold-cursor"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <span class="count">0</span>
+            <span class="count-label">%</span>
+        </div>
+        <div class="preloader-curtain"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo-wrapper">
+            <a href="/" class="logo magnetic" data-strength="20">
+                <span class="logo-text">EOTC</span>
+            </a>
+        </div>
+        <div class="menu-toggle-wrapper magnetic" data-strength="30">
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-label">Menu</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay">
+        <div class="menu-overlay-bg"></div>
+        <div class="menu-cols">
+            <div class="menu-col menu-left">
+                <div class="menu-brand">e o t c</div>
+                <div class="address-block">
+                    <p class="label">we are always here</p>
+                    <p>Addis Ababa, Ethiopia</p>
+                    <p>4 Kilo, Holy Trinity</p>
+                    <p>+251 11 123 4567</p>
+                </div>
+            </div>
+            <div class="menu-col menu-center">
+                <ul class="main-menu">
+                    <li><a href="/" class="menu-link"><span class="amharic-menu">ቤት</span> Home</a></li>
+                    <li><a href="works.html" class="menu-link"><span class="amharic-menu">ስራዎች</span> Works</a></li>
+                    <li><a href="heritage.html" class="menu-link active"><span class="amharic-menu">ቅርስ</span>
+                            Heritage</a></li>
+                    <li><a href="/#contact" class="menu-link"><span class="amharic-menu">አግኙን</span> Contact</a></li>
+                </ul>
+            </div>
+            <div class="menu-col menu-right">
+                <div class="close-btn-wrapper">
+                    <button class="close-menu-btn magnetic" data-strength="50"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="menu-socials">
+                    <a href="#">behance.</a><a href="#">twitter.</a><a href="#">instagram.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Wrapper -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- 1. HERO: "THE ROOTS" -->
+            <!-- Completely different: Minimal, centered artifact, massive Ge'ez texture -->
+            <section class="heritage-hero-unique">
+                <div class="geez-bg-texture">ቅርስ</div> <!-- "Heritage" -->
+
+                <div class="hero-center-artifact">
+                    <!-- A cross or iconic symbol that "floats" -->
+                    <img src="/images/1737273336620.jfif" alt="Ancient Cross" class="floating-artifact">
+                    <div class="artifact-glow"></div>
+                </div>
+
+                <div class="hero-title-wrapper-unique">
+                    <h1 class="unique-title">
+                        <span class="u-line">Sacred</span>
+                        <span class="u-line" style="color: var(--accent);">Origins</span>
+                    </h1>
+                    <div class="amharic-quote">
+                        "የጥንት ዘመንህን አስብ፤ የትውልዱን ዓመታት አስተውል"
+                        <span>(Remember the days of old; consider the generations long past)</span>
+                    </div>
+                </div>
+
+                <div class="scroll-prompt-unique">
+                    <span>Begin Journey</span>
+                    <div class="line-grow"></div>
+                </div>
+            </section>
+
+            <!-- 2. HORIZONTAL SCROLL: "THE TIMELINE" -->
+            <!-- Use GSAP to pin this section and scroll horizontally -->
+            <section class="horizontal-timeline" id="horizontal-scroll">
+                <div class="timeline-track">
+
+                    <!-- Panel 1: Intro -->
+                    <div class="time-panel intro-panel">
+                        <h2>The<br>Timeline</h2>
+                        <p>A journey through three millennia<br>of unbroken faith.</p>
+                        <span class="big-arrow">→</span>
+                    </div>
+
+                    <!-- Panel 2: Axumite -->
+                    <div class="time-panel content-panel">
+                        <div class="panel-img">
+                            <img src="/images/Axum-Stelae-Ethiopia-1.jpg" alt="Axum">
+                        </div>
+                        <div class="panel-info">
+                            <span class="era-year">4th Century</span>
+                            <h3>The Axumite <br>Era</h3>
+                            <p>Christianity becomes the state religion under King Ezana. The Ark of the Covenant finds
+                                its home.</p>
+                            <div class="amharic-era">አክሱም</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Zagwe (Lalibela) -->
+                    <div class="time-panel content-panel">
+                        <div class="panel-img">
+                            <img src="/images/caption.jpg" alt="Lalibela">
+                        </div>
+                        <div class="panel-info">
+                            <span class="era-year">12th Century</span>
+                            <h3>The Zagwe <br>Dynasty</h3>
+                            <p>King Lalibela carves 11 monolithic churches from living rock, creating a 'New Jerusalem'.
+                            </p>
+                            <div class="amharic-era">ላሊበላ</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Solomonic (Gondar) -->
+                    <div class="time-panel content-panel">
+                        <div class="panel-img">
+                            <img src="/images/f8f1a34bb58085f2194bdc90c84f3cf4.jpg" alt="Gondar">
+                        </div>
+                        <div class="panel-info">
+                            <span class="era-year">17th Century</span>
+                            <h3>The Gondarian <br>Period</h3>
+                            <p>A golden age of art, philosophy, and castle building. The synthesis of faith and state.
+                            </p>
+                            <div class="amharic-era">ጎንደር</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 3. THE SCRIPTorium (Manuscripts) -->
+            <!-- Dark, mysterious look with spotlight effects -->
+            <section class="scriptorium-section">
+                <div class="container">
+                    <div class="scriptorium-header">
+                        <h2>The Scriptorium</h2>
+                        <span class="amharic-heading">ብራና</span>
+                    </div>
+                </div>
+
+                <div class="manuscript-showcase">
+                    <!-- Left: Large viewer -->
+                    <div class="manuscript-spotlight">
+                        <img src="/images/1748628291097.jfif" alt="Golden Gospels" class="spotlight-img">
+                        <div class="spotlight-overlay"></div>
+                    </div>
+
+                    <!-- Right: Narrative -->
+                    <div class="manuscript-narrative">
+                        <h4>Illuminated Wisdom</h4>
+                        <p>For centuries, Ethiopian scribes have preserved theology on vellum (parchment). Using inks
+                            made from charcoal, plants, and gold leaf, they created masterpieces of devotion.</p>
+
+                        <div class="thumb-grid">
+                            <img src="/images/1748628303332.jfif" class="mini-thumb active" alt="Thumb 1">
+                            <img src="/images/1748628343361.jfif" class="mini-thumb" alt="Thumb 2">
+                            <img src="/images/1762700787412.jfif" class="mini-thumb" alt="Thumb 3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer (Simple) -->
+            <footer class="footer-section">
+                <div class="container">
+                    <div class="footer-bottom" style="border-top: 1px solid #333;">
+                        <div class="footer-col copyright">
+                            <p>&copy; 2025 EOTC. Guardians of Heritage.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

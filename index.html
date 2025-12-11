@@ -13,6 +13,43 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0c0c0c;
+      overflow: hidden;
+    }
+
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #0c0c0c;
+      z-index: 99999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .preloader-content {
+      color: #D4AF37;
+      font-size: 5rem;
+      font-family: sans-serif;
+      font-weight: 800;
+    }
+
+    .preloader-curtain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: -1;
+    }
+  </style>
 </head>
 
 <body>
@@ -75,7 +112,7 @@
         <ul class="main-menu">
           <li><a href="/" class="menu-link"><span class="amharic-menu">ቤት</span> Home</a></li>
           <li><a href="works.html" class="menu-link"><span class="amharic-menu">ስራዎች</span> Works</a></li>
-          <li><a href="#heritage" class="menu-link"><span class="amharic-menu">ቅርስ</span> Heritage</a></li>
+          <li><a href="heritage.html" class="menu-link"><span class="amharic-menu">ቅርስ</span> Heritage</a></li>
           <li><a href="#contact" class="menu-link"><span class="amharic-menu">አግኙን</span> Contact</a></li>
         </ul>
       </div>
@@ -249,7 +286,7 @@
             <div class="footer-col">
               <h5>Contact</h5>
               <ul>
-                <li><a href="#" class="hover-underline">info@eotc.et</a></li>
+                <li><a href="mailto:davegerim@gmail.com" class="hover-underline">davegerim@gmail.com</a></li>
               </ul>
             </div>
             <div class="footer-col copyright">
