@@ -46,6 +46,7 @@ html.lenis {
     gap: 0.35rem;
     padding: 0.45rem 0.9rem;
     border-radius: 999px;
+    white-space: nowrap;
 }
 
 .mobile-nav a:hover {
@@ -58,6 +59,10 @@ html.lenis {
         overflow-x: hidden;
     }
 
+    #smooth-content {
+        padding-bottom: 110px;
+    }
+
     body {
         cursor: auto;
     }
@@ -65,6 +70,8 @@ html.lenis {
     .mobile-nav {
         display: flex;
         max-width: 94vw;
+        height: 64px;
+        align-items: center;
     }
 
     .cursor-dot,
@@ -97,6 +104,7 @@ html.lenis {
         flex-direction: column;
         padding: 5rem 1.25rem 2rem;
         gap: 2rem;
+        align-items: flex-start;
     }
 
     .menu-col {
@@ -105,14 +113,14 @@ html.lenis {
     }
 
     .menu-brand {
-        font-size: 1.25rem;
-        letter-spacing: 0.35rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.2rem;
         margin-bottom: 1rem;
     }
 
     .menu-link {
-        font-size: 2.1rem;
-        line-height: 1.1;
+        font-size: 1.8rem;
+        line-height: 1.05;
     }
 
     .menu-socials {
@@ -122,17 +130,18 @@ html.lenis {
     }
 
     .hero-section {
-        min-height: 90vh;
-        margin-bottom: 12vh;
+        min-height: 85vh;
+        margin-bottom: 10vh;
     }
 
     .hero-container {
-        padding: 0 1.25rem;
-        top: 54%;
+        padding: 6rem 1.25rem 3rem;
+        top: auto;
+        transform: none;
     }
 
     .hero-title {
-        font-size: clamp(2.5rem, 12vw, 4.6rem);
+        font-size: clamp(2.2rem, 10vw, 3.8rem);
         line-height: 1.05;
         letter-spacing: -1px;
     }
@@ -175,7 +184,7 @@ html.lenis {
     }
 
     .section-title {
-        font-size: clamp(2.4rem, 8vw, 3.4rem);
+        font-size: clamp(2.1rem, 7vw, 3rem);
     }
 
     .portfolio-grid {
@@ -259,8 +268,8 @@ html.lenis {
     }
 
     .works-title {
-        font-size: clamp(2.8rem, 12vw, 4.5rem);
-        line-height: 0.95;
+        font-size: clamp(2.4rem, 10vw, 3.6rem);
+        line-height: 0.98;
     }
 
     .subtitle-wrapper {
@@ -574,7 +583,7 @@ body.hover-view .cursor-follower {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 2100;
     /* Higher than Navbar (2000) */
@@ -708,6 +717,7 @@ body.hover-view .cursor-follower {
     position: relative;
     height: 100vh;
     margin-bottom: 25vh;
+    overflow: hidden;
 }
 
 .hero-container {
