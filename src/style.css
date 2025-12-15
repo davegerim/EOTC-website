@@ -54,12 +54,17 @@ html.lenis {
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 900px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
     body {
         cursor: auto;
     }
 
     .mobile-nav {
         display: flex;
+        max-width: 94vw;
     }
 
     .cursor-dot,
@@ -71,6 +76,11 @@ html.lenis {
         padding: 1.25rem 1.25rem;
         mix-blend-mode: normal;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent);
+    }
+
+    /* Remove decorative lines that can add width */
+    .page-lines {
+        display: none;
     }
 
     .menu-toggle-wrapper {
@@ -140,8 +150,9 @@ html.lenis {
     }
 
     .hero-bg-wrapper {
-        left: 8%;
-        width: 84%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
         height: 70%;
         opacity: 0.45;
     }
