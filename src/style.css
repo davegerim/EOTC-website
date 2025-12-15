@@ -13,7 +13,341 @@ html.lenis {
     height: auto;
 }
 
+/* Layout helpers */
+.container {
+    width: min(1200px, 92vw);
+    margin: 0 auto;
+}
+
+/* Mobile bottom nav */
+.mobile-nav {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2400;
+    display: none;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 999px;
+    padding: 0.45rem 0.6rem;
+    gap: 0.25rem;
+}
+
+.mobile-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+}
+
+.mobile-nav a:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 900px) {
+    body {
+        cursor: auto;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    .cursor-dot,
+    .cursor-follower {
+        display: none !important;
+    }
+
+    .navbar {
+        padding: 1.25rem 1.25rem;
+        mix-blend-mode: normal;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent);
+    }
+
+    .menu-toggle-wrapper {
+        padding: 12px;
+        margin-right: -12px;
+    }
+
+    /* Menu overlay stacks & scrolls */
+    .menu-overlay {
+        overflow-y: auto;
+    }
+
+    .menu-cols {
+        flex-direction: column;
+        padding: 5rem 1.25rem 2rem;
+        gap: 2rem;
+    }
+
+    .menu-col {
+        padding: 0;
+        border: none;
+    }
+
+    .menu-brand {
+        font-size: 1.25rem;
+        letter-spacing: 0.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .menu-link {
+        font-size: 2.1rem;
+        line-height: 1.1;
+    }
+
+    .menu-socials {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-section {
+        min-height: 90vh;
+        margin-bottom: 12vh;
+    }
+
+    .hero-container {
+        padding: 0 1.25rem;
+        top: 54%;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 12vw, 4.6rem);
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+
+    .hero-sub {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .hero-sub p {
+        font-size: 1rem;
+        max-width: none;
+    }
+
+    .hero-bg-wrapper {
+        left: 8%;
+        width: 84%;
+        height: 70%;
+        opacity: 0.45;
+    }
+
+    .marquee-strip {
+        padding: 2.5rem 0;
+    }
+
+    .marquee-inner span {
+        font-size: 8vw;
+        margin: 0 1.25rem;
+    }
+
+    .portfolio-section {
+        padding: 5rem 0 6rem;
+    }
+
+    .section-header {
+        padding: 0 1.25rem 2.5rem;
+    }
+
+    .section-title {
+        font-size: clamp(2.4rem, 8vw, 3.4rem);
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.25rem;
+    }
+
+    .portfolio-item,
+    .double-w,
+    .single-w,
+    .offset-top,
+    .offset-down {
+        grid-column: auto;
+        margin-top: 0;
+    }
+
+    .item-img-wrapper {
+        padding-bottom: 70%;
+    }
+
+    /* Footer */
+    .footer-section {
+        padding: 6rem 1.25rem 3rem;
+    }
+
+    .footer-cta h2 {
+        font-size: clamp(2.4rem, 8vw, 3.2rem);
+    }
+
+    .btn-circle {
+        width: 140px;
+        height: 140px;
+        font-size: 0.95rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 0.25rem;
+    }
+
+    /* Modal */
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .modal-card {
+        padding: 2rem 1.25rem;
+        width: 94%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-title {
+        font-size: 2.4rem;
+    }
+
+    /* Works hero */
+    .works-hero {
+        min-height: 80vh;
+        padding: 7rem 1.25rem 4rem;
+        align-items: flex-end;
+    }
+
+    .hero-badge {
+        width: 64px;
+        height: 64px;
+        top: 10%;
+        right: 8%;
+    }
+
+    .badge-center {
+        font-size: 1.3rem;
+    }
+
+    .works-title {
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+        line-height: 0.95;
+    }
+
+    .subtitle-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .works-sub {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .scroll-down-indicator {
+        bottom: 1.5rem;
+    }
+
+    /* Heritage hero */
+    .heritage-hero-unique {
+        padding: 6rem 1.25rem 4rem;
+        height: auto;
+        min-height: 80vh;
+        align-items: flex-start;
+    }
+
+    .unique-title {
+        font-size: clamp(2.8rem, 9vw, 3.6rem);
+    }
+
+    .geez-bg-texture {
+        font-size: 72vw;
+    }
+
+    .hero-center-artifact {
+        width: 220px;
+        height: 290px;
+    }
+
+    /* Heritage timeline vertical spacing */
+    .timeline-track {
+        flex-direction: column;
+        width: 100%;
+        padding: 3rem 1.25rem;
+        gap: 2.5rem;
+    }
+
+    .time-panel {
+        width: 100%;
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        border: none;
+    }
+
+    .intro-panel {
+        width: 100%;
+        min-width: auto;
+        padding-top: 0;
+    }
+
+    .intro-panel h2 {
+        font-size: clamp(2.2rem, 7vw, 3rem);
+    }
+
+    .content-panel .panel-img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .panel-info {
+        max-width: 100%;
+    }
+
+    .amharic-era {
+        position: static;
+        margin-top: 0.5rem;
+        font-size: clamp(2.6rem, 8vw, 3rem);
+        text-align: right;
+    }
+
+    .scriptorium-header h2 {
+        font-size: clamp(2.2rem, 7vw, 3rem);
+    }
+
+    .manuscript-showcase {
+        flex-direction: column;
+        padding: 0 1.25rem;
+        gap: 2rem;
+    }
+
+    .manuscript-spotlight {
+        height: 360px;
+    }
+}
+
 .lenis.lenis-smooth {
+
     scroll-behavior: auto;
 }
 
