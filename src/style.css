@@ -1480,3 +1480,126 @@ body.modal-open {
         padding: 1.25rem;
     }
 }
+
+/* Global mobile tweaks: keep desktop intact, fix cut text on small screens */
+@media (max-width: 768px) {
+    body {
+        cursor: auto;
+    }
+
+    .navbar {
+        padding: 1.25rem 1.25rem;
+    }
+
+    .hero-section {
+        height: auto;
+        padding: 7rem 1.25rem 4rem;
+        margin-bottom: 12vh;
+    }
+
+    .hero-container {
+        top: 0;
+        transform: none;
+        padding: 0;
+    }
+
+    .hero-sub {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .hero-sub p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .scroll-hint {
+        align-self: flex-start;
+    }
+
+    .hero-bg-wrapper {
+        left: 0;
+        width: 100%;
+        height: 60%;
+        opacity: 0.35 !important;
+    }
+
+    .section-header {
+        padding: 0 1.25rem 3rem;
+    }
+
+    .section-title {
+        font-size: clamp(2.2rem, 8vw, 3rem);
+    }
+
+    .section-sub {
+        font-size: 1rem;
+    }
+
+    .marquee-inner span {
+        font-size: 12vw;
+    }
+
+    .portfolio-section {
+        padding: 6rem 0;
+    }
+
+    .portfolio-item {
+        margin-bottom: 3rem;
+    }
+
+    .btn-circle {
+        width: 140px;
+        height: 140px;
+        font-size: 1rem;
+    }
+
+    .footer-section {
+        padding: 6rem 1.25rem 3rem;
+    }
+
+    .footer-cta h2 {
+        font-size: clamp(2.4rem, 10vw, 3.2rem);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    /* Menu overlay text sizing */
+    .menu-cols {
+        padding: 1.5rem;
+    }
+
+    .menu-brand {
+        font-size: 1.6rem;
+        letter-spacing: 0.6rem;
+    }
+
+    .menu-link {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    /* Heritage timeline panels */
+    .horizontal-timeline {
+        padding: 3rem 1.25rem;
+    }
+
+    .timeline-track {
+        gap: 3rem;
+    }
+
+    .intro-panel,
+    .time-panel {
+        width: 100%;
+        min-width: auto;
+        padding: 0;
+    }
+
+    .time-panel {
+        gap: 2rem;
+    }
+}
