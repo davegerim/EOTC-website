@@ -394,13 +394,24 @@ function initModal() {
     const card = modal.querySelector('.modal-card');
     const options = modal.querySelectorAll('.option-card');
 
+    const setOpenState = () => {
+        modal.classList.add('is-open');
+        document.body.classList.add('modal-open');
+    };
+
+    const clearOpenState = () => {
+        modal.classList.remove('is-open');
+        document.body.classList.remove('modal-open');
+    };
+
     const openModal = (e) => {
-        e.preventDefault();
-        gsap.set(modal, { visibility: 'visible' });
+        e?.preventDefault();
+        setOpenState();
+        gsap.set(modal, { visibility: 'visible', pointerEvents: 'auto', opacity: 0 });
 
         const tl = gsap.timeline();
         tl.to(modal, { opacity: 1, duration: 0.4 })
-            .fromTo(card,
+            .fromTo(card || modal,
                 { scale: 0.9, opacity: 0, y: 50 },
                 { scale: 1, opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=0.2")
             .fromTo(options,
@@ -410,14 +421,23 @@ function initModal() {
 
     const closeModal = () => {
         const tl = gsap.timeline({
-            onComplete: () => gsap.set(modal, { visibility: 'hidden' })
+            onComplete: () => {
+                clearOpenState();
+                gsap.set(modal, { visibility: 'hidden', pointerEvents: 'none', opacity: 0 });
+            }
         });
-        tl.to(modal, { opacity: 0, duration: 0.3 });
+        tl.to(card || modal, { scale: 0.96, duration: 0.2, ease: "power2.in" })
+            .to(modal, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, "-=0.05");
     };
 
     openBtns.forEach(btn => btn.addEventListener('click', openModal));
-    closeBtn.addEventListener('click', closeModal);
-    overlayBg.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlayBg) overlayBg.addEventListener('click', closeModal);
+    document.addEventListener('keyup', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
 }
 
 function initScrollAnimations() {
