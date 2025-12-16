@@ -1483,6 +1483,12 @@ body.modal-open {
 
 /* Global mobile tweaks: keep desktop intact, fix cut text on small screens */
 @media (max-width: 768px) {
+    html, body {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
     body {
         cursor: auto;
     }
@@ -1523,6 +1529,10 @@ body.modal-open {
         width: 100%;
         height: 60%;
         opacity: 0.35 !important;
+    }
+
+    #smooth-wrapper {
+        min-height: 100vh;
     }
 
     .section-header {
