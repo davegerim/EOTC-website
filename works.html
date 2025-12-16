@@ -1,64 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EOTC | Visual Chronicle</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Syne for headings, Manrope for body, Noto Sans Ethiopic for Amharic -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        body {
-            margin: 0;
-            background-color: #0c0c0c;
-            overflow: hidden;
-        }
+      body {
+        margin: 0;
+        background-color: #0c0c0c;
+        overflow: hidden;
+      }
 
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: #0c0c0c;
-            z-index: 99999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #0c0c0c;
+        z-index: 99999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .preloader-content {
-            color: #D4AF37;
-            font-size: 5rem;
-            font-family: sans-serif;
-            font-weight: 800;
-        }
+      .preloader-content {
+        color: #d4af37;
+        font-size: 5rem;
+        font-family: sans-serif;
+        font-weight: 800;
+      }
 
-        .preloader-curtain {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            z-index: -1;
-        }
+      .preloader-curtain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: -1;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Background Grid Lines -->
     <div class="page-lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
 
     <!-- Custom Cursor -->
@@ -67,198 +70,258 @@
 
     <!-- Preloader -->
     <div class="preloader">
-        <div class="preloader-content">
-            <span class="count">0</span>
-            <span class="count-label">%</span>
-        </div>
-        <div class="preloader-curtain"></div>
+      <div class="preloader-content">
+        <span class="count">0</span>
+        <span class="count-label">%</span>
+      </div>
+      <div class="preloader-curtain"></div>
     </div>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo-wrapper">
-            <a href="/" class="logo magnetic" data-strength="20">
-                <span class="logo-text">EOTC</span>
-            </a>
+      <div class="logo-wrapper">
+        <a href="/" class="logo magnetic" data-strength="20">
+          <span class="logo-text">EOTC</span>
+        </a>
+      </div>
+      <div class="menu-toggle-wrapper magnetic" data-strength="30">
+        <div class="menu-toggle">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-label">Menu</div>
         </div>
-        <div class="menu-toggle-wrapper magnetic" data-strength="30">
-            <div class="menu-toggle">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-label">Menu</div>
-            </div>
-        </div>
+      </div>
     </nav>
 
     <!-- Fullscreen Menu Overlay -->
     <div class="menu-overlay">
-        <div class="menu-overlay-bg"></div>
-        <div class="menu-cols">
-            <!-- Left: Branding -->
-            <div class="menu-col menu-left">
-                <div class="menu-brand">e o t c</div>
-                <div class="address-block">
-                    <p class="label">we are always here</p>
-                    <p>Addis Ababa, Ethiopia</p>
-                    <p>0985392862</p>
-                </div>
-            </div>
-
-            <!-- Center: Nav -->
-            <div class="menu-col menu-center">
-                <ul class="main-menu">
-                    <li><a href="/" class="menu-link"><span class="amharic-menu">ቤት</span> Home</a></li>
-                    <li><a href="works.html" class="menu-link active"><span class="amharic-menu">ስራዎች</span> Works</a>
-                    </li>
-                    <li><a href="heritage.html" class="menu-link"><span class="amharic-menu">ቅርስ</span> Heritage</a>
-                    </li>
-                    <li><a href="/#contact" class="menu-link"><span class="amharic-menu">አግኙን</span> Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Right: Socials -->
-            <div class="menu-col menu-right">
-                <div class="close-btn-wrapper">
-                    <button class="close-menu-btn magnetic" data-strength="50">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="menu-socials">
-                    <a href="https://www.linkedin.com/in/dawit-gerim-6086b3211/" target="_blank">LinkedIn.</a>
-                    <a href="https://t.me/D4vv4" target="_blank">Telegram.</a>
-                    <a href="tel:0985392862">0985392862</a>
-                </div>
-            </div>
+      <div class="menu-overlay-bg"></div>
+      <div class="menu-cols">
+        <!-- Left: Branding -->
+        <div class="menu-col menu-left">
+          <div class="menu-brand">EOTC</div>
+          <div class="address-block">
+            <p class="label">we are always here</p>
+            <p>Addis Ababa, Ethiopia</p>
+            <p>0985392862</p>
+          </div>
         </div>
+
+        <!-- Center: Nav -->
+        <div class="menu-col menu-center">
+          <ul class="main-menu">
+            <li>
+              <a href="/" class="menu-link"
+                ><span class="amharic-menu">ቤት</span> Home</a
+              >
+            </li>
+            <li>
+              <a href="works.html" class="menu-link active"
+                ><span class="amharic-menu">ስራዎች</span> Works</a
+              >
+            </li>
+            <li>
+              <a href="heritage.html" class="menu-link"
+                ><span class="amharic-menu">ቅርስ</span> Heritage</a
+              >
+            </li>
+            <li>
+              <a href="/#contact" class="menu-link"
+                ><span class="amharic-menu">አግኙን</span> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Socials -->
+        <div class="menu-col menu-right">
+          <div class="close-btn-wrapper">
+            <button class="close-menu-btn magnetic" data-strength="50">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="menu-socials">
+            <a
+              href="https://www.linkedin.com/in/dawit-gerim-6086b3211/"
+              target="_blank"
+              >LinkedIn.</a
+            >
+            <a href="https://t.me/D4vv4" target="_blank">Telegram.</a>
+            <a href="tel:0985392862">0985392862</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Scroll Wrapper -->
     <div id="smooth-wrapper">
-        <div id="smooth-content">
+      <div id="smooth-content">
+        <!-- Works Header -->
+        <header class="works-hero">
+          <!-- Background visual -->
+          <div class="works-hero-bg">
+            <img src="/images/img1.jpg" alt="Background" class="hero-bg-img" />
+          </div>
+          <!-- Gradient Overlay -->
+          <div class="works-hero-overlay"></div>
+          <!-- Grain Texture for Film Look -->
+          <div class="grain-overlay"></div>
 
-            <!-- Works Header -->
-            <header class="works-hero">
-                <!-- Background visual -->
-                <div class="works-hero-bg">
-                    <img src="/images/img1.jpg" alt="Background" class="hero-bg-img">
-                </div>
-                <!-- Gradient Overlay -->
-                <div class="works-hero-overlay"></div>
-                <!-- Grain Texture for Film Look -->
-                <div class="grain-overlay"></div>
+          <!-- Giant Background Amharic Text (Parallax) -->
+          <div class="bg-amharic-text">ታሪክ</div>
 
-                <!-- Giant Background Amharic Text (Parallax) -->
-                <div class="bg-amharic-text">ታሪክ</div>
+          <div class="container hero-content">
+            <!-- Floating Badge -->
+            <div class="hero-badge magnetic" data-strength="50">
+              <div class="badge-text-wrapper">
+                <svg
+                  viewBox="0 0 100 100"
+                  width="100"
+                  height="100"
+                  class="badge-text-svg"
+                >
+                  <path
+                    id="badgePath"
+                    d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                  />
+                  <text font-size="14" fill="#D4AF37">
+                    <textPath xlink:href="#badgePath" startOffset="0%">
+                      ETHIOPIAN • ORTHODOX • TEWAHEDO •
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <span class="badge-center">✞</span>
+            </div>
 
-                <div class="container hero-content">
-                    <!-- Floating Badge -->
-                    <div class="hero-badge magnetic" data-strength="50">
-                        <div class="badge-text-wrapper">
-                            <svg viewBox="0 0 100 100" width="100" height="100" class="badge-text-svg">
-                                <path id="badgePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
-                                <text font-size="14" fill="#D4AF37">
-                                    <textPath xlink:href="#badgePath" startOffset="0%">ETHIOPIAN • ORTHODOX • TEWAHEDO •
-                                    </textPath>
-                                </text>
-                            </svg>
-                        </div>
-                        <span class="badge-center">✞</span>
-                    </div>
+            <h1 class="works-title">
+              <div class="title-line">
+                <span class="title-inner">Visual</span>
+              </div>
+              <div class="title-line">
+                <span class="title-inner">History</span>
+              </div>
+            </h1>
+            <div class="subtitle-wrapper">
+              <span class="amharic-sub-hero">የቅርስ ማህደር</span>
+              <div class="separator-line"></div>
+              <p class="works-sub">Capturing the Divine Essence</p>
+            </div>
+          </div>
 
-                    <h1 class="works-title">
-                        <div class="title-line"><span class="title-inner">Visual</span></div>
-                        <div class="title-line"><span class="title-inner">History</span></div>
-                    </h1>
-                    <div class="subtitle-wrapper">
-                        <span class="amharic-sub-hero">የቅርስ ማህደር</span>
-                        <div class="separator-line"></div>
-                        <p class="works-sub">Capturing the Divine Essence</p>
-                    </div>
-                </div>
+          <!-- Abstract Scroll Indicator -->
+          <div class="scroll-down-indicator">
+            <span class="scroll-text">Explore</span>
+            <div class="scroll-line-track">
+              <div class="scroll-line-thumb"></div>
+            </div>
+          </div>
+        </header>
 
-                <!-- Abstract Scroll Indicator -->
-                <div class="scroll-down-indicator">
-                    <span class="scroll-text">Explore</span>
-                    <div class="scroll-line-track">
-                        <div class="scroll-line-thumb"></div>
-                    </div>
-                </div>
-            </header>
+        <!-- Works Grid -->
+        <section class="portfolio-section" style="padding-top: 5rem">
+          <div class="container">
+            <div class="portfolio-grid" id="portfolio-grid">
+              <!-- Dynamic Content Will Be Injected Here -->
+            </div>
 
-            <!-- Works Grid -->
-            <section class="portfolio-section" style="padding-top: 5rem;">
-                <div class="container">
-                    <div class="portfolio-grid" id="portfolio-grid">
-                        <!-- Dynamic Content Will Be Injected Here -->
-                    </div>
+            <div
+              class="load-more-wrapper"
+              style="text-align: center; margin-top: 5rem; display: none"
+            >
+              <button
+                id="load-more-btn"
+                class="btn-circle magnetic"
+                data-strength="50"
+                style="background: transparent; color: #fff; cursor: pointer"
+              >
+                <span>Load More</span>
+              </button>
+            </div>
+          </div>
+        </section>
 
-                    <div class="load-more-wrapper" style="text-align: center; margin-top: 5rem; display: none;">
-                        <button id="load-more-btn" class="btn-circle magnetic" data-strength="50"
-                            style="background: transparent; color: #fff; cursor: pointer;">
-                            <span>Load More</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Brief Footer -->
-            <footer class="footer-section">
-                <div class="container">
-                    <div class="footer-bottom" style="border-top: none;">
-                        <div class="footer-col copyright">
-                            <p>&copy; 2025 EOTC. Made with reverence.</p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-        </div>
+        <!-- Brief Footer -->
+        <footer class="footer-section">
+          <div class="container">
+            <div class="footer-bottom" style="border-top: none">
+              <div class="footer-col copyright">
+                <p>&copy; 2025 EOTC. Made with reverence.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <!-- Join Us / Guardianship Modal -->
     <div class="modal-overlay" id="join-modal">
-        <div class="modal-bg-blur"></div>
-        <div class="modal-card">
-            <button class="modal-close magnetic" data-strength="30">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+      <div class="modal-bg-blur"></div>
+      <div class="modal-card">
+        <button class="modal-close magnetic" data-strength="30">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
 
-            <div class="modal-header">
-                <h2 class="modal-title">Guardians of Heritage</h2>
-                <p class="modal-subtitle">Join the mission to preserve the sacred legacy.</p>
-            </div>
-
-            <div class="options-grid">
-                <!-- Option 1: The Scribe -->
-                <a href="https://t.me/D4vv4" target="_blank" class="option-card magnetic" data-strength="20">
-                    <div class="card-icon"><i class="fa-solid fa-scroll"></i></div>
-                    <h3>The Scribe</h3>
-                    <p>Receive weekly curated histories and digital artifacts.</p>
-                    <div class="card-action">Subscribe <i class="fa-solid fa-arrow-right"></i></div>
-                </a>
-
-                <!-- Option 2: The Witness -->
-                <a href="https://t.me/D4vv4" target="_blank" class="option-card magnetic" data-strength="20">
-                    <div class="card-icon"><i class="fa-solid fa-camera"></i></div>
-                    <h3>The Witness</h3>
-                    <p>Contribute photos or stories of local ceremonies.</p>
-                    <div class="card-action">Submit Work <i class="fa-solid fa-arrow-right"></i></div>
-                </a>
-
-                <!-- Option 3: The Steward -->
-                <a href="https://t.me/D4vv4" target="_blank" class="option-card magnetic" data-strength="20">
-                    <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                    <h3>The Steward</h3>
-                    <p>Volunteer your skills to digitize manuscripts.</p>
-                    <div class="card-action">Join Community <i class="fa-solid fa-arrow-right"></i></div>
-                </a>
-            </div>
+        <div class="modal-header">
+          <h2 class="modal-title">Guardians of Heritage</h2>
+          <p class="modal-subtitle">
+            Join the mission to preserve the sacred legacy.
+          </p>
         </div>
+
+        <div class="options-grid">
+          <!-- Option 1: The Scribe -->
+          <a
+            href="https://t.me/D4vv4"
+            target="_blank"
+            class="option-card magnetic"
+            data-strength="20"
+          >
+            <div class="card-icon"><i class="fa-solid fa-scroll"></i></div>
+            <h3>The Scribe</h3>
+            <p>Receive weekly curated histories and digital artifacts.</p>
+            <div class="card-action">
+              Subscribe <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Option 2: The Witness -->
+          <a
+            href="https://t.me/D4vv4"
+            target="_blank"
+            class="option-card magnetic"
+            data-strength="20"
+          >
+            <div class="card-icon"><i class="fa-solid fa-camera"></i></div>
+            <h3>The Witness</h3>
+            <p>Contribute photos or stories of local ceremonies.</p>
+            <div class="card-action">
+              Submit Work <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Option 3: The Steward -->
+          <a
+            href="https://t.me/D4vv4"
+            target="_blank"
+            class="option-card magnetic"
+            data-strength="20"
+          >
+            <div class="card-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <h3>The Steward</h3>
+            <p>Volunteer your skills to digitize manuscripts.</p>
+            <div class="card-action">
+              Join Community <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="/src/main.js"></script>
-</body>
-
+  </body>
 </html>
