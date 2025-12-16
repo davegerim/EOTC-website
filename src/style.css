@@ -1661,4 +1661,65 @@ body.modal-open {
     .time-panel {
         gap: 2rem;
     }
+
+    /* Heritage timeline mobile fixes */
+    .horizontal-timeline {
+        padding: 2.5rem 1rem;
+        overflow: visible;
+    }
+
+    .timeline-track {
+        gap: 2rem;
+    }
+
+    .intro-panel {
+        padding-top: 2rem;
+    }
+
+    .horizontal-timeline h2 {
+        font-size: clamp(2.4rem, 9vw, 3.2rem);
+        line-height: 1.05;
+    }
+
+    .horizontal-timeline p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .time-panel {
+        min-height: auto;
+        align-items: flex-start;
+        padding: 0;
+        border: none;
+    }
+
+    .content-panel {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content-panel .panel-img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+    }
+
+    .content-panel .panel-img img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .panel-info {
+        max-width: 100%;
+    }
+
+    .panel-info h3 {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+        line-height: 1.1;
+    }
+
+    .era-year {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
 }
