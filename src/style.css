@@ -303,12 +303,14 @@ body.hover-view .cursor-follower {
 }
 
 .menu-link {
-  display: block;
+  display: inline-block;
+  /* Changed from block to wrap text */
+  position: relative;
+  /* Anchor for absolute positioning */
   font-family: var(--font-display);
   font-size: 4rem;
   font-weight: 700;
   color: #000;
-  /* Black text */
   text-decoration: none;
   line-height: 1.2;
   transition: opacity 0.3s;
@@ -319,11 +321,19 @@ body.hover-view .cursor-follower {
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--accent);
-  vertical-align: middle;
-  margin-right: 1rem;
+
+  /* Absolute Positioning to layout text cleanly */
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+
+  margin-right: 1.5rem;
+  /* Gap between Amharic and English */
+  white-space: nowrap;
   opacity: 0;
-  transform: translateX(-20px);
-  display: inline-block;
+  pointer-events: none;
+  /* Don't intercept clicks */
   transition: all 0.3s ease;
 }
 
@@ -338,7 +348,7 @@ body.hover-view .cursor-follower {
 
 .main-menu .menu-link:hover .amharic-menu {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(-50%) translateX(0);
 }
 
 .close-menu-btn {
